@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jinsen Su | Homepage</title>
-  <meta name="description" content="Personal academic homepage of Jinsen Su (苏锦森), Master's student at Xiamen University, working on multimodal large language models.">
+  <title data-i18n="page.title">苏锦森 | 个人主页</title>
+  <meta name="description" content="苏锦森的个人学术主页，厦门大学人工智能研究院硕士研究生，研究方向为多模态大语言模型。">
+  <!-- GA4：仅在正式站点启用，本地预览不参与统计。 -->
+  <meta name="ga4-measurement-id" content="G-RT0FHW659Y">
+  <script src="analytics.js" defer></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,16 +19,22 @@
   <!-- ===== 顶部导航 ===== -->
   <header class="site-nav" id="site-nav">
     <a class="nav-brand" href="#top">
-      <img src="assets/pic.jpg" alt="avatar" class="nav-avatar">
-      <span>Jinsen Su</span>
+      <img src="assets/pic.jpg" alt="" class="nav-avatar">
+      <span data-i18n="name">苏锦森</span>
     </a>
-    <nav class="nav-links">
-      <a href="#news">News</a>
-      <a href="#publications">Publications</a>
-      <a href="#awards">Awards</a>
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-    </nav>
+    <div class="nav-actions">
+      <nav class="nav-links" aria-label="主导航">
+        <a href="#news" data-i18n="section.news">最新动态</a>
+        <a href="#publications" data-i18n="section.publications">学术论文</a>
+        <a href="#awards" data-i18n="section.awards">荣誉奖项</a>
+        <a href="#projects" data-i18n="section.projects">项目经历</a>
+        <a href="#education" data-i18n="section.education">教育经历</a>
+      </nav>
+      <div class="language-switch" role="group" aria-label="语言选择 / Language">
+        <button class="language-option" type="button" data-language="zh-CN" lang="zh-CN" aria-label="切换到中文" aria-pressed="true">中文</button>
+        <button class="language-option" type="button" data-language="en" lang="en" aria-label="Switch to English" aria-pressed="false">EN</button>
+      </div>
+    </div>
   </header>
 
   <main id="main">
@@ -33,66 +42,66 @@
     <!-- ===== 个人简介 ===== -->
     <section class="profile reveal" id="top">
       <div class="profile-photo-wrap">
-        <img src="assets/pic.jpg" alt="Jinsen Su" class="profile-photo">
+        <img src="assets/pic.jpg" alt="苏锦森 / Jinsen Su" class="profile-photo">
       </div>
       <div class="profile-info">
-        <h1 class="profile-name">Jinsen Su</h1>
-        <p class="profile-title">Master's Student, Institute of Artificial Intelligence</p>
-        <p class="profile-affil">Xiamen University · Xiamen, China</p>
-        <p class="profile-advisor">Advisor: <a href="https://zhengxiawu.github.io" target="_blank" rel="noopener">Prof. Xiawu Zheng</a></p>
-        <p class="profile-keywords">Multi-Modal Learning · Multimodal Agents</p>
+        <h1 class="profile-name" data-i18n="name">苏锦森</h1>
+        <p class="profile-title" data-i18n="profile.title">人工智能研究院 · 硕士研究生</p>
+        <p class="profile-affil" data-i18n="profile.affiliation">厦门大学 · 中国厦门</p>
+        <p class="profile-advisor" data-i18n="profile.advisor">导师：<a href="https://zhengxiawu.github.io" target="_blank" rel="noopener">郑侠武教授</a></p>
+        <p class="profile-keywords" data-i18n="profile.keywords">多模态压缩 · 多模态 Agent 评测</p>
         <p class="profile-contact">
           <a class="contact-link" href="mailto:consonnm@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>consonnm@gmail.com</a>
           <span class="sep">·</span>
           <a class="contact-link" href="https://github.com/consonnm" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.83 1.18 3.09 0 4.41-2.7 5.38-5.26 5.67.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .31.21.68.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>GitHub</a>
           <span class="sep">·</span>
-          <a class="contact-link" href="https://scholar.google.com/citations?hl=en&user=zEtcLP4AAAAJ" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3z"/><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>Google Scholar</a>
+          <a class="contact-link" href="https://scholar.google.com/citations?hl=en&user=zEtcLP4AAAAJ" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3z"/><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg><span data-i18n="scholar">谷歌学术</span></a>
         </p>
-        <p class="profile-bio">
-          I am a Master's student (2025–2028) at the Institute of Artificial Intelligence, <strong>Xiamen University</strong>,
-          and a member of the <strong>Media Analytics and Computing (MAC) Lab</strong>,
-          advised by <a href="https://zhengxiawu.github.io" target="_blank" rel="noopener">Prof. Xiawu Zheng</a>.
-          My research focuses on <strong>multimodal large language models</strong>.
-          Previously, I received my B.Eng. in Computer Science and Technology from <strong>Fuzhou University</strong>,
-          where I was an <strong>ICPC regional bronze medalist</strong>.
+        <p class="profile-bio" data-i18n="profile.bio">
+          我是<strong>厦门大学</strong>人工智能研究院的硕士研究生（2025–2028），
+          同时是<strong>媒体分析与计算（MAC）实验室</strong>成员，
+          导师为<a href="https://zhengxiawu.github.io" target="_blank" rel="noopener">郑侠武教授</a>。
+          我的研究方向是<strong>多模态大语言模型</strong>。
+          此前，我在<strong>福州大学</strong>获得计算机科学与技术专业工学学士学位，
+          本科期间曾获 <strong>ICPC 亚洲区域赛铜牌</strong>。
         </p>
-        <p class="profile-bio">
-          I am currently a <strong>Research Intern at Meituan (LongCat Team)</strong>, May 2026 – Present.
+        <p class="profile-bio" data-i18n="profile.internship">
+          自 2026 年 5 月起，我在<strong>美团 LongCat 团队</strong>担任<strong>研究实习生</strong>。
         </p>
       </div>
     </section>
 
     <!-- ===== News ===== -->
     <section class="block reveal" id="news">
-      <h2 class="block-title"><span class="block-marker"></span>News</h2>
-      <p class="block-sub">News Updates</p>
+      <h2 class="block-title"><span class="block-marker"></span><span data-i18n="section.news">最新动态</span></h2>
+      <p class="block-sub" data-i18n="news.subtitle">近期研究与个人动态</p>
       <ul class="news-list">
         <!-- TODO: 确认 OmniScope 录用月份后修改日期 -->
-        <li><span class="news-date">2026.07</span><p>🔥 <strong>OmniScope</strong> was accepted to <strong>ACM MM 2026</strong> as first author.</p></li>
-        <li><span class="news-date">2026.05</span><p>Joined <strong>Meituan (LongCat Team)</strong> as a Research Intern.</p></li>
-        <li><span class="news-date">2026.04</span><p>🔥 <strong>Video-MME-v2</strong> was released on <a href="https://arxiv.org/abs/2604.05015" target="_blank" rel="noopener">arXiv</a>.</p></li>
-        <li><span class="news-date">2025.04</span><p>Joined the <strong>MAC Lab</strong> (Media Analytics and Computing), Xiamen University.</p></li>
-        <li><span class="news-date">2024.02</span><p>Won the <strong>Second Prize</strong> in the ASC Student Supercomputer Challenge (rank 29/359).</p></li>
-        <li><span class="news-date">2023.10</span><p>Won the <strong>Bronze Medal</strong> in the 48th ICPC Asia Regional Contest (Xi'an).</p></li>
+        <li><span class="news-date">2026.07</span><p data-i18n="news.omniscope">🔥 以第一作者身份完成的 <strong>OmniScope</strong> 被 <strong>ACM MM 2026</strong> 录用。</p></li>
+        <li><span class="news-date">2026.05</span><p data-i18n="news.meituan">加入<strong>美团 LongCat 团队</strong>，担任研究实习生。</p></li>
+        <li><span class="news-date">2026.04</span><p data-i18n="news.video">🔥 <strong>Video-MME-v2</strong> 已发布于 <a href="https://arxiv.org/abs/2604.05015" target="_blank" rel="noopener">arXiv</a>。</p></li>
+        <li><span class="news-date">2025.04</span><p data-i18n="news.mac">加入厦门大学<strong>媒体分析与计算（MAC）实验室</strong>。</p></li>
+        <li><span class="news-date">2024.02</span><p data-i18n="news.asc">获得 ASC 世界大学生超级计算机竞赛<strong>二等奖</strong>（全球排名 29/359）。</p></li>
+        <li><span class="news-date">2023.10</span><p data-i18n="news.icpc">获得第 48 届 ICPC 国际大学生程序设计竞赛亚洲区域赛（西安站）<strong>铜牌</strong>。</p></li>
       </ul>
     </section>
 
     <!-- ===== Publications ===== -->
     <section class="block reveal" id="publications">
-      <h2 class="block-title"><span class="block-marker"></span>Publications</h2>
-      <p class="block-sub"><sup>*</sup> Equal contribution ·
-        <a href="https://scholar.google.com/citations?hl=en&user=zEtcLP4AAAAJ" target="_blank" rel="noopener">Full list on Google Scholar</a>
+      <h2 class="block-title"><span class="block-marker"></span><span data-i18n="section.publications">学术论文</span></h2>
+      <p class="block-sub" data-i18n="publications.subtitle">
+        <a href="https://scholar.google.com/citations?hl=en&user=zEtcLP4AAAAJ" target="_blank" rel="noopener">在谷歌学术查看完整列表</a>
       </p>
 
       <article class="pub">
         <span class="pub-year">2026</span>
         <div class="pub-body">
-          <h3 class="pub-title">OmniScope: Modality-Decoupled Token Compression for Omnimodal Large Language Models</h3>
-          <p class="pub-authors"><strong>Jinsen Su</strong>, Yongdong Luo, Yuexiao Ma, Yibo Hu, Meiguang Jin, Xiaowu Zheng</p>
-          <p class="pub-venue"><span class="venue-tag">ACM MM 2026</span><span class="venue-note">CCF-A · First author</span></p>
+          <h3 class="pub-title" lang="en">OmniScope: Modality-Decoupled Token Compression for Omnimodal Large Language Models</h3>
+          <p class="pub-authors" lang="en"><strong>Jinsen Su</strong>, Yongdong Luo, Yuexiao Ma, Yibo Hu, Meiguang Jin, Xiaowu Zheng</p>
+          <p class="pub-venue"><span class="venue-tag">ACM MM 2026</span><span class="venue-note" data-i18n="publications.firstAuthor">CCF-A · 第一作者</span></p>
           <p class="pub-links">
             <a href="https://arxiv.org/abs/2607.23193" target="_blank" rel="noopener">ArXiv</a>
-            <a href="https://github.com/MAC-AutoML/OmniScope" target="_blank" rel="noopener">Code</a>
+            <a href="https://github.com/MAC-AutoML/OmniScope" target="_blank" rel="noopener" data-i18n="code">代码</a>
           </p>
         </div>
       </article>
@@ -100,12 +109,12 @@
       <article class="pub">
         <span class="pub-year">2026</span>
         <div class="pub-body">
-          <h3 class="pub-title">Video-MME-v2: Towards the Next Stage in Benchmarks for Comprehensive Video Understanding</h3>
-          <p class="pub-authors">Chaoyou Fu, Haozhi Yuan, Yuhao Dong, Yi-Fan Zhang, Yunhang Shen, Xiaoxing Hu, Xueying Li, <strong>Jinsen Su</strong>, Chengwu Long, Xiaoyao Xie, Yongkang Xie, Xiawu Zheng, Xue Yang, Haoyu Cao, Yunsheng Wu, Ziwei Liu, Xing Sun, Caifeng Shan, Ran He</p>
-          <p class="pub-venue"><span class="venue-tag">arXiv 2026</span><span class="venue-note">Major contributor</span></p>
+          <h3 class="pub-title" lang="en">Video-MME-v2: Towards the Next Stage in Benchmarks for Comprehensive Video Understanding</h3>
+          <p class="pub-authors" lang="en">Chaoyou Fu, Haozhi Yuan, Yuhao Dong, Yi-Fan Zhang, Yunhang Shen, Xiaoxing Hu, Xueying Li, <strong>Jinsen Su</strong>, Chengwu Long, Xiaoyao Xie, Yongkang Xie, Xiawu Zheng, Xue Yang, Haoyu Cao, Yunsheng Wu, Ziwei Liu, Xing Sun, Caifeng Shan, Ran He</p>
+          <p class="pub-venue"><span class="venue-tag">arXiv 2026</span><span class="venue-note" data-i18n="publications.contributor">主要贡献者</span></p>
           <p class="pub-links">
             <a href="https://arxiv.org/abs/2604.05015" target="_blank" rel="noopener">ArXiv</a>
-            <a href="https://github.com/MME-Benchmarks/Video-MME-v2" target="_blank" rel="noopener">Code</a>
+            <a href="https://github.com/MME-Benchmarks/Video-MME-v2" target="_blank" rel="noopener" data-i18n="code">代码</a>
           </p>
         </div>
       </article>
@@ -113,84 +122,82 @@
 
     <!-- ===== Awards ===== -->
     <section class="block reveal" id="awards">
-      <h2 class="block-title"><span class="block-marker"></span>Awards</h2>
+      <h2 class="block-title"><span class="block-marker"></span><span data-i18n="section.awards">荣誉奖项</span></h2>
 
       <article class="award">
         <span class="award-year">2023.10</span>
         <div class="award-body">
-          <h3 class="award-title">Bronze Medal — The 48th International Collegiate Programming Contest (ICPC) Asia Regional Contest, Xi'an</h3>
+          <h3 class="award-title" data-i18n="awards.icpc">第 48 届 ICPC 国际大学生程序设计竞赛亚洲区域赛（西安站）铜牌</h3>
         </div>
       </article>
 
       <article class="award">
         <span class="award-year">2024.02</span>
         <div class="award-body">
-          <h3 class="award-title">Second Prize — 2024 ASC Student Supercomputer Challenge</h3>
-          <p class="award-desc">Ranked 29th among 359 teams worldwide</p>
+          <h3 class="award-title" data-i18n="awards.asc">2024 ASC 世界大学生超级计算机竞赛二等奖</h3>
+          <p class="award-desc" data-i18n="awards.ascRank">全球 359 支参赛队伍中排名第 29</p>
         </div>
       </article>
 
       <article class="award">
         <span class="award-year">2024.10</span>
         <div class="award-body">
-          <h3 class="award-title">Third Prize — AI4S Cup LLM Challenge: Multimodal Table Recognition & Understanding</h3>
+          <h3 class="award-title" data-i18n="awards.ai4s">AI4S 大模型挑战赛：多模态表格识别与理解三等奖</h3>
         </div>
       </article>
 
       <article class="award">
         <span class="award-year">2023.12</span>
         <div class="award-body">
-          <h3 class="award-title">National Third Prize — Huawei Developer Competition: LLM AI Challenge</h3>
+          <h3 class="award-title" data-i18n="awards.huaweiAI">华为开发者大赛：大模型 AI 挑战赛全国三等奖</h3>
         </div>
       </article>
 
       <article class="award">
         <span class="award-year">2025.05</span>
         <div class="award-body">
-          <h3 class="award-title">Second Prize — 2025 Huawei Software Elite Challenge (CodeCraft), Hangzhou–Xiamen Division</h3>
+          <h3 class="award-title" data-i18n="awards.codecraft2025">2025 华为软件精英挑战赛（CodeCraft）杭厦赛区二等奖</h3>
         </div>
       </article>
 
       <article class="award">
         <span class="award-year">2024.04</span>
         <div class="award-body">
-          <h3 class="award-title">Second Prize — 2024 Huawei Software Elite Challenge (CodeCraft), Hangzhou–Xiamen Division</h3>
+          <h3 class="award-title" data-i18n="awards.codecraft2024">2024 华为软件精英挑战赛（CodeCraft）杭厦赛区二等奖</h3>
         </div>
       </article>
 
       <article class="award">
         <span class="award-year">2023.01</span>
         <div class="award-body">
-          <h3 class="award-title">Third Prize — 2023 PKU HPCGame (0th)</h3>
+          <h3 class="award-title" data-i18n="awards.hpc">2023 北京大学高性能计算竞赛（第 0 届 HPCGame）三等奖</h3>
         </div>
       </article>
 
       <article class="award">
         <span class="award-year">2024.02</span>
         <div class="award-body">
-          <h3 class="award-title">Honorable Mention — 2024 Mathematical Contest in Modeling / Interdisciplinary Contest in Modeling (MCM/ICM)</h3>
+          <h3 class="award-title" data-i18n="awards.mcm">2024 美国大学生数学建模竞赛（MCM/ICM）荣誉奖</h3>
         </div>
       </article>
     </section>
 
     <!-- ===== Projects ===== -->
     <section class="block reveal" id="projects">
-      <h2 class="block-title"><span class="block-marker"></span>Projects</h2>
+      <h2 class="block-title"><span class="block-marker"></span><span data-i18n="section.projects">项目经历</span></h2>
 
       <article class="pub">
         <span class="pub-year">2024</span>
         <div class="pub-body">
-          <h3 class="pub-title">CodeCraft — Intelligent Port Scheduling System</h3>
-          <p class="pub-venue"><span class="venue-tag">Python & C++</span><span class="venue-note">Huawei Software Elite Challenge 2024</span></p>
-          <p class="pub-desc">
-            Tackled a scheduling problem abstracted from Huawei Cloud's intelligent port business.
-            Built robot/ship path planning with BFS + A* to achieve locally optimal, collision-free
-            dispatching; modeled cargo selection with features of value, quantity, and distance;
-            tuned the valuation function with Bayesian optimization and random forests —
-            maximizing total transportation profit.
+          <h3 class="pub-title" data-i18n="projects.title">CodeCraft — 智能港口调度系统</h3>
+          <p class="pub-venue"><span class="venue-tag">Python & C++</span><span class="venue-note" data-i18n="projects.venue">2024 华为软件精英挑战赛</span></p>
+          <p class="pub-desc" data-i18n="projects.description">
+            针对华为云智能港口业务抽象出的调度问题，使用 BFS 与 A* 算法实现机器人和船舶的路径规划，
+            完成局部最优、无碰撞的调度；结合货物价值、数量与距离等特征建立货物选择模型，
+            并利用贝叶斯优化和随机森林调优估值函数，以最大化总运输收益。
           </p>
           <p class="pub-links">
-            <a href="https://github.com/consonnm/Huawei-Software-Elite-Challenge-2024" target="_blank" rel="noopener">Code</a>
+            <a href="https://github.com/consonnm/Huawei-Software-Elite-Challenge-2024" target="_blank" rel="noopener" data-i18n="code">代码</a>
           </p>
         </div>
       </article>
@@ -198,21 +205,21 @@
 
     <!-- ===== Education ===== -->
     <section class="block reveal" id="education">
-      <h2 class="block-title"><span class="block-marker"></span>Education</h2>
+      <h2 class="block-title"><span class="block-marker"></span><span data-i18n="section.education">教育经历</span></h2>
 
       <article class="award">
         <span class="award-year">2025–2028</span>
         <div class="award-body">
-          <h3 class="award-title">Xiamen University <span class="edu-tag">985</span></h3>
-          <p class="award-desc">M.Sc. in Artificial Intelligence (Multimodal), Institute of Artificial Intelligence · MAC Lab</p>
+          <h3 class="award-title" data-i18n="education.xmu">厦门大学 <span class="edu-tag">985</span></h3>
+          <p class="award-desc" data-i18n="education.masters">人工智能（多模态方向）硕士，人工智能研究院 · MAC 实验室</p>
         </div>
       </article>
 
       <article class="award">
         <span class="award-year">2021–2025</span>
         <div class="award-body">
-          <h3 class="award-title">Fuzhou University <span class="edu-tag">211</span></h3>
-          <p class="award-desc">B.Eng. in Computer Science and Technology, College of Computer and Data Science · ACM Lab</p>
+          <h3 class="award-title" data-i18n="education.fzu">福州大学 <span class="edu-tag">211</span></h3>
+          <p class="award-desc" data-i18n="education.bachelors">计算机科学与技术工学学士，计算机与大数据学院 · ACM 实验室</p>
         </div>
       </article>
     </section>
@@ -221,18 +228,18 @@
 
   <!-- ===== 页脚 ===== -->
   <footer class="site-footer">
-    <p>© 2026 Jinsen Su</p>
+    <p data-i18n="footer.copyright">© 2026 苏锦森</p>
     <p class="footer-links">
-      <a href="mailto:consonnm@gmail.com">Email</a>
-      <a href="https://scholar.google.com/citations?hl=en&user=zEtcLP4AAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="mailto:consonnm@gmail.com" data-i18n="footer.email">邮箱</a>
+      <a href="https://scholar.google.com/citations?hl=en&user=zEtcLP4AAAAJ" target="_blank" rel="noopener" data-i18n="scholar">谷歌学术</a>
       <a href="https://github.com/consonnm" target="_blank" rel="noopener">GitHub</a>
-      <a href="#top">Back to top ↑</a>
+      <a href="#top" data-i18n="footer.top">返回顶部 ↑</a>
     </p>
     <p class="visitor-stats">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
-      <span><span id="vercount_value_site_pv">–</span> visits</span>
+      <span><span id="vercount_value_site_pv">–</span> <span data-i18n="footer.visits">次访问</span></span>
       <span class="sep">·</span>
-      <span><span id="vercount_value_site_uv">–</span> visitors</span>
+      <span><span id="vercount_value_site_uv">–</span> <span data-i18n="footer.visitors">位访客</span></span>
     </p>
   </footer>
   <script async src="https://cn.vercount.one/js"></script>
